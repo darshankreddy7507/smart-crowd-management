@@ -1,0 +1,141 @@
+/* ===== BODY ===== */
+body {
+  background-color: var(--background-gray);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: 100vh;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-left: 220px;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--background-gray);
+}
+
+/* ===== HEADER ===== */
+.dashboard-header {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* ===== CARDS CONTAINER ===== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* ===== COMMON CARD STYLE ===== */
+.card-content1,
+.card-content2,
+.card-content3,
+.card-content4 {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+}
+
+/* ===== CARD COLORS ===== */
+.card-content1 {
+  background-color: var(--light-blue);
+}
+
+.card-content2 {
+  background-color: var(--light-red);
+}
+
+.card-content3 {
+  background-color: var(--light-green);
+}
+
+.card-content4 {
+  background-color: var(--light-yellow);
+}
+
+/* ===== HOVER EFFECT ===== */
+.card-content1:hover,
+.card-content2:hover,
+.card-content3:hover,
+.card-content4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* ===== TEXT INSIDE CARDS ===== */
+.card-title {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.card-value {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 8px;
+  color: var(--text-dark);
+}
+
+/* ===== STATUS COLORS ===== */
+.status-low {
+  border-left: 6px solid var(--success-green);
+}
+
+.status-medium {
+  border-left: 6px solid var(--warning-yellow);
+}
+
+.status-high {
+  border-left: 6px solid var(--danger-red);
+}
+
+/* ===== ALERT ===== */
+.alert {
+  color: var(--danger-red);
+  font-weight: bold;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.4;
+  }
+}
